@@ -1,7 +1,7 @@
 import { Image, Layout as AntLayout, Row, Button } from 'antd';
 import { LogoutOutlined } from '@ant-design/icons';
 
-import { LogoMinimal } from '../../assets';
+import { LogoMinimal } from '../assets';
 
 const { Header, Content } = AntLayout;
 
