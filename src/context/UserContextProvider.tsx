@@ -24,7 +24,24 @@ interface UserContextProviderProps {
 export const UserContextProvider: React.FC<UserContextProviderProps> = ({
   children,
 }) => {
-  const [users, setUsers] = useState<User[]>([]);
+  const [users, setUsers] = useState<User[]>([
+    {
+      id: '1',
+      first_name: 'Ahmad',
+      last_name: 'Raza',
+      email: 'ahmdrzalifa@gmail.com',
+      role: 'admin',
+      status: 'active',
+    },
+    {
+      id: '2',
+      first_name: 'Ali',
+      last_name: 'Raza',
+      email: 'ali.raza@gmail.com',
+      role: 'accountant',
+      status: 'inactive',
+    },
+  ]);
 
   const addUser = (user: Omit<User, 'id'>) => {
     setUsers((oldUsers) => [

@@ -1,7 +1,7 @@
-import { Image, Layout as AntLayout, Row, Button } from 'antd';
-import { LogoutOutlined } from '@ant-design/icons';
+import { Image, Layout as AntLayout, Row } from 'antd';
 
 import { LogoMinimal } from '../assets';
+import { styles } from './styles';
 
 const { Header, Content } = AntLayout;
 
@@ -13,29 +13,21 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <AntLayout>
       <Header>
-        <Row justify="space-between" align="middle" style={{ height: '100%' }}>
+        <Row
+          justify="space-between"
+          align="middle"
+          style={styles.headerContentContainer}
+        >
           <Image
             src={LogoMinimal}
             alt="header-logo"
             preview={false}
             height={40}
-            style={{ display: 'flex' }}
+            style={styles.headerLogo}
           />
-          <Button icon={<LogoutOutlined />} type="primary">
-            Logout
-          </Button>
         </Row>
       </Header>
-      <Content
-        style={{
-          height: 'calc(100vh - 64px)',
-          margin: '0 auto',
-          width: '92%',
-          paddingTop: '8px',
-        }}
-      >
-        {children}
-      </Content>
+      <Content style={styles.contentContainer}>{children}</Content>
     </AntLayout>
   );
 };

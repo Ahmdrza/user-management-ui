@@ -1,7 +1,7 @@
 import { Form, Input, message, Modal, Select, Switch } from 'antd';
 import { useContext, useEffect } from 'react';
-import { UserContext } from '../../../context/UserContextProvider';
-import { Role } from '../../../types/role';
+import { UserContext } from '../../context/UserContextProvider';
+import { Role } from '../../types/role';
 
 const { Option } = Select;
 

@@ -1,1 +1,26 @@
 @import '~antd/dist/antd.less';
+
+@font-face {
+    font-family: 'New Hero Regular';
+    src: url('./fonts/Hero New Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'New Hero ExtraBold';
+    src: url('./fonts/Hero New ExtraBold.otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+body {
+    font-family: "New Hero Regular";
+    * {
+        word-spacing: -4px !important;
+    }
+    h1, h2, h3, h4, h5, h6, table thead th {
+        font-family: "New Hero ExtraBold"; 
+    }
+}
