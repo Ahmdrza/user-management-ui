@@ -7,6 +7,10 @@ Users Management web app
 - React
 - TypeScript
 
+## Design Library
+
+- Ant Design
+
 ## Getting started with the project
 
 - run `yarn` to install dependencies
