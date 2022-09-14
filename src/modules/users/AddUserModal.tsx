@@ -81,7 +81,7 @@ export const AddUserModal: React.FC<AddUserModalProps> = ({
           label="Role"
           rules={[{ required: true, message: 'Role is required' }]}
         >
-          <Select placeholder="Select Role" allowClear>
+          <Select placeholder="Select Role">
             <Option value="admin">Admin</Option>
             <Option value="doctor">Doctor</Option>
             <Option value="accountant">Accountant</Option>

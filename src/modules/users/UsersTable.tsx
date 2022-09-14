@@ -18,6 +18,7 @@ import {
 import { UserContext } from '../../context/UserContextProvider';
 import { User } from '../../types/user';
 import { UpdateUserModal } from './UpdateUserModal';
+import { styles } from './styles';
 
 const { Column } = Table;
 
@@ -56,7 +57,7 @@ export const UsersTable: React.FC = () => {
               <Space>
                 <Typography.Text
                   copyable={{
-                    icon: <CopyOutlined style={{ color: '#FFB71B' }} />,
+                    icon: <CopyOutlined style={styles.copyButtonIcon} />,
                     text: user.id,
                     tooltips: 'Copy ID',
                   }}
@@ -66,7 +67,7 @@ export const UsersTable: React.FC = () => {
                     size="small"
                     type="text"
                     shape="circle"
-                    icon={<EditOutlined style={{ color: '#6D64FF' }} />}
+                    icon={<EditOutlined style={styles.editButtonIcon} />}
                     onClick={() => setEditUserId(user.id)}
                   />
                 </Tooltip>
@@ -77,13 +78,13 @@ export const UsersTable: React.FC = () => {
                     okText="Yes"
                     cancelText="No"
                     placement="left"
-                    icon={<QuestionCircleOutlined style={{ color: 'red' }} />}
+                    icon={<QuestionCircleOutlined style={styles.popupIcon} />}
                   >
                     <Button
                       size="small"
                       type="text"
                       shape="circle"
-                      icon={<DeleteOutlined style={{ color: '#FF595A' }} />}
+                      icon={<DeleteOutlined style={styles.deleteButtonIcon} />}
                     />
                   </Popconfirm>
                 </Tooltip>
